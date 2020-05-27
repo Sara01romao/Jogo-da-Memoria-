@@ -1,0 +1,64 @@
+*{
+    padding: 0 px;
+    margin: 0 px;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    display: flex;
+    background: #379bf8;
+}
+
+#cardboard{
+    width: 600px;
+    height: 320px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.memory-card{
+    width: calc(25% - 45px);
+    height: 33%;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: 0.3s;
+    position: relative;
+}
+
+/*----Anamação das cartas----*/
+
+     /*efeito para quando clica na carta*/
+     .memory-card:active{
+        transform: scale(0.97);
+    }
+
+    /*efeito de girar a carta*/
+    .memory-card.flip{
+         transform: rotateY(180deg);
+    }
+
+   
+
+
+.front-face, .back-face{
+    background: #84c3f7;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.45);
+  
+
+}
+
+.front-face{
+    transform: rotateY(180deg);
+}
